@@ -155,7 +155,45 @@
       .map {
         height: px(770);
       }
+      .年龄 {
+        height: px(370);
+        display: flex;
+        .charts_content {
+          display: flex;
+          flex-direction: row;
+          padding: px(10) px(30);
 
+          .图一, .图二, .图三 {
+            width: 33.33%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .title {
+              border: none;
+              font-size: px(22);
+              text-align: center;
+              text-shadow: 0 0 px(3) white;
+              padding: px(10) px(16);
+            }
+
+            .bin {
+              height: 100%;
+            }
+
+            .text {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: #33a4fa;
+              font-size: px(40);
+              text-shadow: 0 0 px(20) #33a4fa;
+              font-weight: bold;
+            }
+          }
+        }
+      }
     }
 
     .section5 {
