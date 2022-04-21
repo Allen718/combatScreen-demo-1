@@ -4,6 +4,7 @@ import './home.scss'
 import Chart1 from "../chart1";
 import Chart2 from "../chart2";
 import Chart3 from "../chart3";
+import Chart4 from "../chart4";
 
 export default () => {
     return (
@@ -16,6 +17,7 @@ export default () => {
                 </section>
                 <section className={'section2'}>
                     <Chart3/>
+                    <Chart4/>
                 </section>
                 <section className={'section3'}></section>
                 <section className={'section4'}></section>
