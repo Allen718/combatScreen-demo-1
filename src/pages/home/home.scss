@@ -58,9 +58,8 @@
     .chart_wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      p {
-        margin: 0;
+      p{
+        margin: 0 auto;
         color: white;
         flex-shrink: 1;
         border-bottom-left-radius: 4px;
@@ -71,10 +70,8 @@
         text-shadow: 0 0 px(3) white;
         padding: 0 px(16);
       }
-
       > div {
         flex: 1;
-        width: 100%;
       }
     }
 
@@ -86,6 +83,9 @@
 
       .管辖统计 {
         height: px(315);
+      }
+      .破获排名{
+        height: px(423);
       }
     }
 

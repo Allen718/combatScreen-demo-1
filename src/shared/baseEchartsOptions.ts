@@ -5,7 +5,7 @@ export const baseEchartOptions = {
         color: '#79839E'
     },
     title: {show: false},
-    legend: {show: false},
+    legend: {show: false, textStyle: {color: 'white'},},
     grid: {
         x: px(40),
         y: px(40),
