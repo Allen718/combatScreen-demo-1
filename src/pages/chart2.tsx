@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import * as echarts from "echarts";
-import {createEchartsOptions} from '../../shared/createEchartsOptions'
+import {createEchartsOptions} from '../shared/createEchartsOptions'
 
 export default () => {
     const px = (n) => n / 2420 * (window as any).pageWidth;

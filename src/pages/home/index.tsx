@@ -2,7 +2,8 @@ import React from 'react'
 import header from '../../assets/images/header.png'
 import './home.scss'
 import Chart1 from "../chart1";
-import Chart2 from "./chart2";
+import Chart2 from "../chart2";
+import Chart3 from "../chart3";
 
 export default () => {
     return (
@@ -13,7 +14,9 @@ export default () => {
                     <Chart1/>
                     <Chart2/>
                 </section>
-                <section className={'section2'}></section>
+                <section className={'section2'}>
+                    <Chart3/>
+                </section>
                 <section className={'section3'}></section>
                 <section className={'section4'}></section>
                 <section className={'section5'}></section>
