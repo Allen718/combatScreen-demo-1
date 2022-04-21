@@ -25,6 +25,7 @@
       border-radius: 4px;
       box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
       position: relative;
+
       &::before {
         content: '';
         clear: both;
@@ -58,7 +59,8 @@
     .chart_wrapper {
       display: flex;
       flex-direction: column;
-      p{
+
+      p {
         margin: 0 auto;
         color: white;
         flex-shrink: 1;
@@ -70,6 +72,7 @@
         text-shadow: 0 0 px(3) white;
         padding: 0 px(16);
       }
+
       > div {
         flex: 1;
       }
@@ -84,24 +87,65 @@
       .管辖统计 {
         height: px(315);
       }
-      .破获排名{
+
+      .破获排名 {
         height: px(423);
       }
     }
 
     .section2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       grid-area: box2;
-      .趋势分析{
-        height:px(360);
+
+      .趋势分析 {
+        height: px(360);
       }
-      .时段分析{
-        height:px(358)
+
+      .时段分析 {
+        height: px(358)
       }
 
     }
 
     .section3 {
       grid-area: box3;
+
+      .战果 {
+        height: 100%;
+        padding: 0 px(12);
+
+        .table {
+          border: 1px solid green;
+          margin-top: px(38);
+          border-collapse: collapse;
+
+          th, td {
+            border: 1px solid #1a3671;
+            font-size: px(5);
+            color:white;
+            text-align: center;
+            vertical-align: middle;
+          }
+
+          thead {
+            th {
+              height: px(70);
+
+              box-shadow: inset 0 0 px(60) 0 #1f3d85;
+            }
+          }
+
+          tbody {
+            td {
+              height: px(50);
+              width: px(84);
+              background: #1c2456;
+            }
+          }
+        }
+      }
 
     }
 
