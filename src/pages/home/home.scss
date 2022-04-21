@@ -55,9 +55,38 @@
       }
     }
 
+    .chart_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        margin: 0;
+        color: white;
+        flex-shrink: 1;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: 1px solid rgb(30, 76, 139);
+        font-size: px(22);
+        text-align: center;
+        text-shadow: 0 0 px(3) white;
+        padding: 0 px(16);
+      }
+
+      > div {
+        flex: 1;
+        width: 100%;
+      }
+    }
+
     .section1 {
       grid-area: box1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
+      .管辖统计 {
+        height: px(315);
+      }
     }
 
     .section2 {
