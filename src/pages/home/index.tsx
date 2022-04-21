@@ -6,6 +6,7 @@ import Chart2 from "../chart2";
 import Chart3 from "../chart3";
 import Chart4 from "../chart4";
 import Chart5 from "../chart5";
+import Chart6 from "../chart6";
 
 export default () => {
     return (
@@ -23,7 +24,9 @@ export default () => {
                 <section className={'section3'}>
                     <Chart5/>
                 </section>
-                <section className={'section4'}></section>
+                <section className={'section4'}>
+                    <Chart6/>
+                </section>
                 <section className={'section5'}></section>
             </main>
         </div>

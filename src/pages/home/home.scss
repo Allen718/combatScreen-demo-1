@@ -124,7 +124,7 @@
           th, td {
             border: 1px solid #1a3671;
             font-size: px(5);
-            color:white;
+            color: white;
             text-align: center;
             vertical-align: middle;
           }
@@ -151,6 +151,10 @@
 
     .section4 {
       grid-area: box4;
+
+      .map {
+        height: px(770);
+      }
 
     }
 
