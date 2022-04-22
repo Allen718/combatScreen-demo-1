@@ -10,6 +10,8 @@ import Chart6 from "../chart6";
 import Chart7 from "../chart7";
 import Chart8 from "../chart8";
 import Chart9 from "../chart9";
+import Chart10 from "../chart10";
+import Chart11 from "../chart11";
 
 export default () => {
     return (
@@ -38,7 +40,15 @@ export default () => {
                         </div>
                     </div>
                 </section>
-                <section className={'section5'}></section>
+                <section className={'section5'}>
+                    <div className={'bordered chart_wrapper 类型'}>
+                        <p>案发类型统计</p>
+                        <div className={'container'}>
+                            <Chart10/>
+                            <Chart11/>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     )

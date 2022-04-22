@@ -155,9 +155,11 @@
       .map {
         height: px(770);
       }
+
       .年龄 {
         height: px(370);
         display: flex;
+
         .charts_content {
           display: flex;
           flex-direction: row;
@@ -169,6 +171,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
+
             .title {
               border: none;
               font-size: px(22);
@@ -198,6 +201,20 @@
 
     .section5 {
       grid-area: box5;
+
+      .类型 {
+        height: px(313);
+        .container {
+          pdding-bootom: px(20);
+          display: flex;
+
+          > div {
+            width: 50%;
+            height: 100%;
+          }
+        }
+      }
+
 
     }
   }
