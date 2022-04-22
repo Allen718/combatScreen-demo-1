@@ -4,9 +4,16 @@ import * as echarts from "echarts";
 export default () => {
     const px = (n) => n / 2420 * (window as any).pageWidth;
     const chartDiv = useRef(null);
-    useEffect(() => {
-        const myChart = echarts.init(chartDiv.current);
-        myChart.setOption(
+    const myChart = useRef(null)
+    const data = [
+        {name: '入室抢劫', value: 40},
+        {name: '当街抢劫', value: 25},
+        {name: '团伙诈骗', value: 23},
+        {name: '刑事案件', value: 20},
+        {name: '民事案件', value: 35},
+    ];
+    const renderData = (data) => {
+        myChart.current.setOption(
             {
                 textStyle: {
                     fontSize: px(12),
@@ -15,7 +22,7 @@ export default () => {
                 title: {show: false},
                 legend: {show: false},
                 xAxis: {
-                    data: ['入室抢劫', '当街抢劫', '团伙诈骗', '刑事案件', '民事案件'],
+                    data: data.map(i => i.name),
                     axisTick: {show: false},
                     axisLine: {
                         lineStyle: {color: '#083B70'}
@@ -62,9 +69,25 @@ export default () => {
                             }]),
                         }
                     },
-                    data: [40, 25, 23, 20, 35]
+                    data: data.map(i => i.value)
                 }]
             });
+    }
+    useEffect(()=>{
+        setInterval(()=>{
+            const newData=[
+                {name: '入室抢劫', value: Math.random()*10},
+                {name: '当街抢劫', value: Math.random()*10},
+                {name: '团伙诈骗', value: Math.random()*10},
+                {name: '刑事案件', value: Math.random()*10},
+                {name: '民事案件', value: Math.random()*10},
+            ]
+            renderData(newData)
+        },1000)
+    },[])
+    useEffect(() => {
+         myChart.current= echarts.init(chartDiv.current);
+        renderData(data);
     }, [])
     return (
         <div className={'charts'} ref={chartDiv}/>

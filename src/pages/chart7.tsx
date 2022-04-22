@@ -5,9 +5,13 @@ import {createEchartsOptions} from '../shared/createEchartsOptions';
 const px = (n) => n / 2420 * (window as any).pageWidth;
 export default () => {
     const divRef = useRef(null);
-    useEffect(() => {
-        const myChart = echarts.init(divRef.current);
-        myChart.setOption(createEchartsOptions({
+    const myChart = useRef(null);
+    const data = [
+        {name: '男', value: 0.2},
+        {name: '女', value: 0.8},
+    ]
+    const renderData = (data) => {
+        myChart.current.setOption({
             color: ['#8D70F8', '#33A4FA'],
             xAxis: {show: false},
             yAxis: {show: false},
@@ -19,8 +23,8 @@ export default () => {
                 itemWidth: px(24),
                 itemHeight: px(12),
                 textStyle: {
-                    color:'#fff',
-                    fontSize:px(10),
+                    color: '#fff',
+                    fontSize: px(10),
                 },
             },
             grid: {
@@ -47,14 +51,25 @@ export default () => {
                         borderColor: '#0F113A',
                         borderWidth: px(4)
                     },
-                    data: [
-                        {value: 0.2, name: '女'},
-                        {value: 0.8, name: '男'},
-                    ]
+                    data,
                 }
             ]
 
-        }));
+        })
+    }
+
+    useEffect(() => {
+        setInterval(() => {
+            const man = Number(Math.random().toFixed(1));
+            const woman = (1 - man).toFixed(1);
+            const newData = [{name: '男', value: man}, {name: '女', value: woman}]
+            renderData(newData);
+        }, 1000)
+    }, [])
+    useEffect(() => {
+         myChart.current= echarts.init(divRef.current);
+         renderData(data)
+
     }, [])
     return (
         <div className={'图一'}>

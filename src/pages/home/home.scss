@@ -30,6 +30,7 @@
       &::before {
         content: '';
         clear: both;
+        pointer-events: none;
         display: block;
         position: absolute;
         top: 0;
