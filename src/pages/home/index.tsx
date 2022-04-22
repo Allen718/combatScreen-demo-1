@@ -12,6 +12,8 @@ import Chart8 from "../chart8";
 import Chart9 from "../chart9";
 import Chart10 from "../chart10";
 import Chart11 from "../chart11";
+import Chart12 from "../chart12";
+import Chart13 from "../chart13";
 
 export default () => {
     return (
@@ -48,6 +50,14 @@ export default () => {
                             <Chart11/>
                         </div>
                     </div>
+                    <div className={'bordered chart_wrapper 街道'}>
+                        <p>兰州市案发街道统计</p>
+                        <div className={'container charts'}>
+                            <Chart12/>
+                            <Chart13/>
+                        </div>
+                    </div>
+
                 </section>
             </main>
         </div>

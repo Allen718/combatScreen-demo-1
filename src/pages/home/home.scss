@@ -214,6 +214,20 @@
           }
         }
       }
+      .街道 {
+        height: px(312);
+        display: flex;
+        .container {
+          flex: 1;
+          display: flex;
+
+          > div {
+            width: 50%;
+            height: 100%;
+            padding-bottom: px(16);
+          }
+        }
+      }
 
 
     }
