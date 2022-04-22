@@ -14,6 +14,7 @@ import Chart10 from "../chart10";
 import Chart11 from "../chart11";
 import Chart12 from "../chart12";
 import Chart13 from "../chart13";
+import Chart14 from "../chart14";
 
 export default () => {
     return (
@@ -57,9 +58,15 @@ export default () => {
                             <Chart13/>
                         </div>
                     </div>
-
+                    <div className={'bordered chart_wrapper 手段'}>
+                        <p>作案手段分析</p>
+                        <Chart14/>
+                    </div>
                 </section>
             </main>
+            <footer className={'footer'}>
+                这是大屏幕项目的footer
+            </footer>
         </div>
     )
 };

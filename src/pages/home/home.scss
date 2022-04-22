@@ -2,7 +2,6 @@
 
 .home {
   height: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   background: #010310;
@@ -13,6 +12,8 @@
   }
 
   main {
+    width: px(2420);
+    margin: 0 auto;
     flex: 1;
     display: grid;
     grid-template: "box1 box2 box4 box5" 755fr
@@ -123,7 +124,7 @@
 
           th, td {
             border: 1px solid #1a3671;
-            font-size: px(5);
+            font-size: px(24);
             color: white;
             text-align: center;
             vertical-align: middle;
@@ -132,7 +133,6 @@
           thead {
             th {
               height: px(70);
-
               box-shadow: inset 0 0 px(60) 0 #1f3d85;
             }
           }
@@ -151,6 +151,9 @@
 
     .section4 {
       grid-area: box4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       .map {
         height: px(770);
@@ -201,9 +204,13 @@
 
     .section5 {
       grid-area: box5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       .类型 {
         height: px(313);
+
         .container {
           pdding-bootom: px(20);
           display: flex;
@@ -214,9 +221,11 @@
           }
         }
       }
+
       .街道 {
         height: px(312);
         display: flex;
+
         .container {
           flex: 1;
           display: flex;
@@ -229,7 +238,52 @@
         }
       }
 
+      .手段 {
+        height: px(500);
+        padding: 0 px(24);
+        table {
+          width: 100%;
+          margin-top: px(32);
+          table-layout: fixed;
+          border-collapse: collapse;
+          th, td {
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #1a3671;
 
+          }
+
+          thead {
+            th {
+              height: px(42);
+              box-shadow: inset 0 0 px(60) 0 #1f3d85;
+              font-size: px(24);
+            }
+          }
+
+          tbody {
+            td {
+              height: px(24);
+              width: px(84);
+              background: #1c2456;
+              font-size: px(18);
+            }
+          }
+        }
+      }
     }
   }
+}
+
+.footer {
+  color: white;
+  height: px(68);
+  border: 1px solid #0d2d59;
+  margin: px(20) 0 1px;
+  border-radius: 4px;
+  background: #0c0d2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
